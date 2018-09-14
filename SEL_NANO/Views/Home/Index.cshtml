@@ -1,0 +1,397 @@
+﻿@{
+    ViewBag.Title = "NANOTech | Sel Nilai Inti";
+    Layout = "~/Views/Shared/_Layout_Master_Nano.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="NRPId" name="GpId" value="@ViewBag.NRP" />
+<input type="hidden" id="NAMAId" name="GpId" value="@ViewBag.NAMA" />
+
+<style>
+    .persons-nano {
+        height: 326px !important;
+    }
+
+    .colorRow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: yellow;
+    }
+
+    /*Galery Foto*/
+    .dropZoneElement {
+        position: relative;
+        display: inline-block;
+        background-color: #f8f8f8;
+        border: 1px solid #c7c7c7;
+        width: 230px;
+        height: 110px;
+        text-align: center;
+    }
+
+    .textWrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        font-size: 24px;
+        line-height: 1.2em;
+        font-family: Arial,Helvetica,sans-serif;
+        color: #000;
+    }
+
+    .dropImageHereText {
+        color: #c7c7c7;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    .product {
+        float: left;
+        position: relative;
+        margin: 0 10px 10px 0;
+        padding: 0;
+    }
+
+        .product img {
+            width: auto;
+            height: 110px;
+        }
+
+    .wrapper:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    #qrcode {
+        width: 160px;
+        height: 160px;
+        margin-top: 15px;
+    }
+</style>
+
+<div id="intro" class="clearfix">
+    <div class="item">
+        <div class="container">
+            <div class="row">
+                <h1 data-animate="fadeInDown">SALAM HANGAT DARI KAMI</h1>
+                <p class="message" data-animate="fadeInUp">Hangatnya suasana menciptakan bahagia, tertawa adalah bagian dari keseriusan kami menciptakan lingkungan komunitas yang produktif inovatif.</p>
+
+                @*<div class="col-md-6 col-md-offset-3" data-animate="fadeInUp">
+                    <form action="#" method="post" id="frm-landingPage1" class="form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="alamat email Anda" name="email" id="frm-landingPage1-email" required value="">
+                            <span class="input-group-btn">
+                                <input class="btn btn-default" type="submit" value="Kirim" name="_submit" id="frm-landingPage1-submit">
+                            </span>
+                        </div>*@
+                <!-- /input-group -->
+                @*</form>
+                        <p class="text-small">Kami tidak akan menggadaikan apalagi menjual alamat email Anda, janji!</p>
+                    </div>*@
+
+                <div class="row" data-animate="fadeInUp" id="groupChallenge" hidden>
+                    <div class="col-md-12"><h2 id="idChooseme"></h2></div>
+                    <div class="col-md-12"><h2 id="idChallenge"></h2></div>
+                    <div class="col-md-12"> </div>
+                    <div class="col-md-12">
+                        @*<button type="button" class="btn btn-warning btn-round-lg btn-lg" onclick="clickChooseme()">Choose Me!</button>*@
+                        <button id="btnChallenge" type="button" class="btn btn-warning btn-round-lg btn-lg" onclick="clickChallenge()">Challenge Me!</button>
+                        <button id="btnSubmit" type="button" class="btn btn-success btn-round-lg btn-lg" onclick="clickSubmit()">Submit</button>
+                    </div>
+                    @*<div id="btnSubmit" class="col-md-12" style="margin-top:7px" hidden>
+                            <button type="button" class="btn btn-success btn-round-lg btn-lg" onclick="clickSubmit()">Submit</button>
+                            <button type="button" class="btn btn-info btn-round-lg btn-lg" onclick="clickReset()">Reset</button>
+                        </div>*@
+                    <div id="wndScore" hidden>
+                        <div id="ScoreDropdownlist"></div>
+                        @*<div id="grid_Score" hidden></div>*@
+                        <button id="btnSaveScore" type="button" class="btn btn-success" onclick="clickSaveScore()">Save Score</button>
+                        @*<button type="button" class="btn btn-success" onclick="clickClose()">Close</button>*@
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="section1">
+    <div>
+        <div id="wndUser" hidden>
+            <div class="col-md-1">NRP</div>
+            <input type="text" id="inputNRP" />
+            <button onclick="ClickSetUser()">Set User</button>
+        </div>
+
+        <h2 class="title" data-animate="fadeInDown">Kegiatan Meeting</h2>
+        <br />
+        <div id="Tabs" class="form-horizontal">
+            <ul>
+                <li class="k-state-active">Kehadiran</li>
+                <li>Petugas Meeting Sel</li>
+                <li>Notulen</li>
+                <li>Petugas Lapor VIP</li>
+                <li>Micro Sharing</li>
+                <li>Detail PIC</li>
+                <li>Score Challange</li>
+            </ul>
+
+            <div id="tab1" data-animate="bounceIn">
+                <div class="form-horizontal">
+                    <div id="wndQR" hidden>
+                        <div id="QRcode"></div>
+                    </div>
+                    @*<div class="col-md-1" style="width:90px;margin-left:-30px;margin-top:7px">
+                            Tanggal :
+                        </div>
+                        <div class="col-md-3" style="margin-left:-65px">
+                            <input type="text" id="txtTglKehadiran" />
+                            <button id="btnView" class="btn btn-warning" onclick="ClickViewKehadiran()">View</button>
+                        </div>
+                        <br />*@
+                    <div id="idPersen" style="text-align:left"></div>
+                    <div id="Grid_Kehadiran" style="margin-top:25px"></div>
+                    <br />
+                    <button id="btnSave" class="btn btn-success" onclick="ClickSaveAll()">Save</button>
+                </div>
+            </div>
+
+            <div id="tab2" data-animate="bounceIn">
+                <div class="form-horizontal">
+                    <div class="col-md-1" style="width:90px;margin-left:-30px;margin-top:7px">
+                        Tanggal :
+                    </div>
+                    <div class="col-md-3" style="margin-left:-65px">
+                        <input type="text" id="txtTglMeeting" />
+                        <button id="btnView" class="btn btn-warning" onclick="ClickViewMeeting()">View</button>
+                    </div>
+                    <br />
+
+                    <div id="Grid_Meeting" style="margin-top:25px"></div>
+                </div>
+            </div>
+            <div id="tab3" data-animate="bounceIn">
+                <div class="form-horizontal">
+                    <div class="col-md-1" style="width:90px;margin-left:-30px;margin-top:7px">
+                        Tanggal :
+                    </div>
+                    <div class="col-md-3" style="margin-left:-65px">
+                        <input type="text" id="txtTglNotulen" />
+                        <button id="btnView" class="btn btn-warning" onclick="ClickViewNotulen()">View</button>
+                    </div>
+                    <br />
+
+                    <div id="Grid_Notulen" style="margin-top:25px"></div>
+                </div>
+            </div>
+            <div id="tab4" data-animate="bounceIn">
+                <div class="form-horizontal">
+                    <div class="col-md-1" style="width:90px;margin-left:-30px;margin-top:7px">
+                        Tanggal :
+                    </div>
+                    <div class="col-md-3" style="margin-left:-65px">
+                        <input type="text" id="txtTglVIP" />
+                        <button id="btnView" class="btn btn-warning" onclick="ClickViewVIP()">View</button>
+                    </div>
+                    <br />
+
+                    <div id="Grid_VIP" style="margin-top:25px"></div>
+                </div>
+            </div>
+            <div id="tab5" data-animate="bounceIn" style="text-align:left">
+                <div class="form-horizontal">
+                    @*<video width="400" height="200" controls><source src="https://www.dropbox.com/pri/get/VideoNano/Tes.mp4?_subject_uid=411345025&w=AAARB3WHa_-YbD94TrAvmXFsdaotUB9Ye7wFSixAoZsZyA" type="video/mp4"></video>*@
+
+                    <button class="btn btn-warning" onclick="clickUpload()" id="idUpload">Select Files...</button>
+                    <button class="btn btn-info" onclick="btn_TemplateMicroShearing()" id="idTmpl">Download Template</button>
+                    <div id="Grid_MicroShearing" style="margin-top:25px"></div>
+
+                    <div id="wndUpload" hidden>
+                        <div><input type="file" id="file_UploadMicroShearing" /></div>
+                        <div class="form-horizontal" id="gridUploadMicroShearing"></div>
+                        <button id="btn_Save" onclick="clickSave()" class="btn btn-success">Save</button>
+                    </div>
+                    <a id="idBtnDropbox1" href="https://www.dropbox.com/developers/chooser#javascript" target="_blank">Choose</a>
+                    @*            <a id="idBtnDropbox2" href="https://cfl.dropboxstatic.com/static/images/developers/dropblox.png" class="dropbox-saver dropbox-dropin-btn dropbox-dropin-default"><span class="dropin-btn-status"></span>Save to Dropbox</a>*@
+                </div>
+            </div>
+            <div id="tab6" data-animate="fadeInDown">
+                <div class="form-horizontal">
+                    <div id="Grid_Detail_PIC" style="margin-top:25px"></div>
+                </div>
+            </div>
+            <div id="tab7" data-animate="fadeInDown">
+                <div class="form-horizontal">
+                    <div id="grid_Score2" style="margin-top:25px"></div>
+                    <button type="button" id="idScore" class="btn btn-success" onclick="clickSaveScore2()">Save Score</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="section  text-gray" id="section2">
+    <div class="container">
+        <div class="col-md-12">
+
+            <h2 class="title" data-animate="fadeInDown">TENTANG KAMI</h2>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p class="text-large text-thin" data-animate="fadeInUp">Berkelompok dan berkerumun menyatukan suara adalah hobi kami, tidak ada hal lain yang lebih penting daripada berhasil bersama dalam suka dan duka. </p>
+                    <p class="text-large text-thin margin-bottom" data-animate="fadeInUp">Aku dan kamu membentuk kami, kami bukanlah aku atau kamu lagi. Kami adalah satu, satu tekad mewujudkan cita, berbahagia, berilmu dan beramal agar Allah senantiasa meninggikan derajat kita satu derajat lagi.</p>
+                    <p data-animate="fadeInUp"><img src="@ViewBag.pathParent/Images/team.jpg" alt="" class="img-circle img-responsive ondra-michal"></p>
+                </div>
+            </div>
+        </div>
+        <!-- /.12 -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+<!-- *** ABOUT US END *** -->
+<!-- *** JOIN US ***
+_________________________________________________________ -->
+
+<div class="" id="sectionFoto">
+    <div class="container">
+        <div class="col-md-12">
+            <h2 style="text-align:center;font-size:40px;font-weight:900" class="title" data-animate="fadeInDown">GALERY</h2>
+
+            <div id="uploadFoto" data-animate="fadeInUp" hidden>
+                <div class="row">
+                    <div class="col-md-2">Description Foto : </div>
+                    <div class="col-md-4" style="margin-left:-60px">
+                        <input type="text" id="foto_desc" style="width:300px" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2" style="margin-top:15px">Upload Foto : </div>
+                    <div class="col-md-4" style="margin-left:-60px">
+                        <input type="file" id="file_UploadFoto" />
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="k-content" style="margin-top:10px" data-animate="fadeInUp">
+                <div class="demo-section k-content wide">
+                    <div class="wrapper">
+                        <div id="GaleryFoto"></div>
+                        @*<div class="dropZoneElement">
+                                <div class="textWrapper">
+                                    <p><span>+</span>Add Image</p>
+                                    <p class="dropImageHereText">Drop image here to upload</p>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+            <div id="wndFoto">
+                <div id="isiFoto"></div>
+                <div id="isiFotoDesc"></div>
+            </div>
+
+        </div>
+        <!-- /.12 -->
+    </div>
+    <!-- /.container -->
+</div>
+
+@*<div class="section text-gray" data-animate="bounceIn">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+
+                <h2 class="title">Anda ingin pindah kelompok sel?</h2>
+                <p class="lead margin-bottom">Segera hubungi kami dan kami akan dengan senang hati dan tangan terbuka menerima Anda.</p>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <form action="#" method="post" id="frm-landingPage2" class="form">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="alamat email Anda" name="email" id="frm-landingPage2-email" required value="">
+                                <span class="input-group-btn">
+                                    <input class="btn btn-default" type="submit" value="Kirim" name="_submit" id="frm-landingPage2-submit">
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.12 -->
+        </div>
+        <!-- /.container -->
+    </div>*@
+<!-- /.section -->
+<!-- *** JOIN US END *** -->
+<!-- *** TESTIMONIALS ***
+_________________________________________________________ -->
+<div class="section text-gray" id="section3" data-animate="fadeInUp">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="mb20">
+                <h2 class="title" data-animate="fadeInUp">Salam kenal dari Anggota</h2>
+                <p class="lead text-center" data-animate="fadeInUp">Semangat NANO, bentuk minimalis fungsi strategis kecepatan miris :) </p>
+            </div>
+            @Html.Raw(ViewBag.html)
+            <div hidden>
+                <input type="file" id="file_UploadPerson" />
+            </div>
+            <div id="addAnggota" hidden>
+                <button id="idAddAnggota" class="btn btn-info">Update Anggota</button>
+                <div id="wndaddAnggota" hidden>
+                    <div id="gridAddAnggota"></div>
+                </div>
+            </div>
+        </div> <!-- /.12 -->
+    </div> <!-- /.container -->
+</div><!-- /.section -->
+<!-- *** TESTIMONIALS END *** -->
+<!-- *** CONTACT ***
+_________________________________________________________ -->
+<div class="section" id="section4">
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+
+            <h2 class="title" data-animate="fadeInDown">Kontak Kami</h2>
+            <p class="lead margin-bottom" data-animate="fadeInUp">
+                Nabi Shallallahu ‘alaihi wa sallam bersabda :<br>
+                مَنْ سَرَّهُ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ أَوْ يُنْسَأَ لَهُ فِي أَثَرِهِ فَلْيَصِلْ رَحِمَهُ<br>
+                “Barang siapa yang ingin dilapangkan rizkinya dan dipanjangkan umurnya, maka hendaklah ia menyambung tali silaturahmi”. [Muttafaqun ‘alaihi].
+            </p>
+
+            <ul class="list-unstyled text-large text-thin" data-animate="fadeInUp">
+                <li><strong>E-mail:</strong> ...pamapersada.com</li>
+                <li><strong>Phone:</strong> +62214602015</li>
+            </ul>
+        </div>
+        <!-- /.12 -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+@*<script type="text/javascript" src="@ViewBag.pathParent/Js/dropins.js" id="dropboxjs" data-app-key="4qqx120618bxjlo"></script>*@
+
+<script type="text/x-kendo-template" id="tmplGalery">
+    <div class="product">
+        @*<img src="../content/web/foods/#= name #" alt="#: name # image" />*@
+        <img onclick="clickImage('@ViewBag.pathParent/Images/Galery/#=FILE_PATH#', '#=FILE_DESC#')" src="@ViewBag.pathParent/Images/Galery/#= FILE_PATH #" />
+        <div id="imgDesc" style="width:110px">#= FILE_DESC #</div>
+    </div>
+</script>
+<script src="@ViewBag.pathParent/Js/intro.js"></script>
+<script src="@ViewBag.pathParent/Js/Section1.js"></script>
+<script src="@ViewBag.pathParent/Js/Section3.js"></script>
+<script src="@ViewBag.pathParent/Js/SectionFoto.js"></script>
+@*<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="4qqx120618bxjlo"></script>*@

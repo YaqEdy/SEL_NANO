@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClass_Nano">
+  <DataContextMoniker Name="/DataClass_NanoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="061cdd28-41a7-40ca-aef4-e2774fdae50b" isExpanded="false" absoluteBounds="0.5, 3.875, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_NOTULEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6a941b7-c350-469e-a24f-d13e3e6d2ac7" absoluteBounds="0.51500000000000057, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2c3aa1e4-e27f-4d86-9bcc-d7f374ac2c1d" isExpanded="false" absoluteBounds="0.5, 2, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_KEGIATAN_MEETING" />
+      <nestedChildShapes>
+        <elementListCompartment Id="660a49cb-8efe-4a32-b41c-bc06ca066650" absoluteBounds="0.51500000000000012, 2.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9f317ce-30d6-4cb2-8fe6-e53d6020bea8" isExpanded="false" absoluteBounds="3.125, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_PELAPOR_VIP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10bd16ab-e21a-4251-a843-644b58abbb64" absoluteBounds="3.14, 1.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f5317b8-053e-40bf-ab96-48772c6755dc" isExpanded="false" absoluteBounds="6.25, 1.625, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_R_KEHADIRAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00ce68da-c52d-476e-943d-fdf5038cba8f" absoluteBounds="6.265, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35491402-eb72-455a-8add-c223550e923a" isExpanded="false" absoluteBounds="6.25, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_T_KEHADIRAN_MEETING" />
+      <nestedChildShapes>
+        <elementListCompartment Id="beeea267-f664-4465-bb15-3a9f0c4aa3e3" absoluteBounds="6.265, 1.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a2998a99-3938-451a-80cf-a305f808c318" isExpanded="false" absoluteBounds="0.5, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_T_KEGIATAN_MEETING" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6237a04e-7400-4e76-8919-97bcdca8ad7c" absoluteBounds="0.51499999999999968, 2.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d02c60f-4286-4bc2-b9d9-252b137808f3" isExpanded="false" absoluteBounds="0.5, 3.375, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_T_NOTULEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff5bd0a0-7c35-4c65-b6fd-bdf77d910240" absoluteBounds="0.51499999999999968, 3.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b23b5a4c-b20d-4336-9283-ce3bd1d56611" isExpanded="false" absoluteBounds="3.125, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_T_PELAPOR_VIP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8747097-54bb-4e2c-80ba-fbb74a6979af" absoluteBounds="3.1399999999999997, 1.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e1ea40b9-77fb-4804-ad06-c2077af43050" isExpanded="false" absoluteBounds="3, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_M_MICRO_SHEARING" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07d76327-1db6-4749-8c39-a6073e2e7c54" absoluteBounds="3.015, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35b9798e-a7bf-42ed-a95e-e36a3f9daa34" isExpanded="false" absoluteBounds="3, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_MICRO_SHEARING" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd555f91-9b1d-4764-8350-1a7ab08a565e" absoluteBounds="3.015, 3.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7fe2cdd1-8ab9-469c-84d5-9c74df12178b" isExpanded="false" absoluteBounds="3, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_M_MICRO_SHEARING_TEMP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46307034-2da3-48a8-9d58-bc9801b1f741" absoluteBounds="3.0149999999999997, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0bd25571-d4b3-443c-a176-3a1168e6fef1" isExpanded="false" absoluteBounds="6.25, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_KEHADIRAN_MEETING" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da3f8661-b676-4fc9-ac45-c6c7248dc4d2" absoluteBounds="6.265, 1.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c335b045-b5a4-4448-ba29-4994f2b3b519" isExpanded="false" absoluteBounds="0.5, 1, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_TBL_M_EMPLOYEE_NANO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae8fa559-5a32-4b69-aaea-88a21f9d1388" absoluteBounds="0.51499999999999968, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f98d0fa-3487-43ce-b25b-4e507058d8fe" isExpanded="false" absoluteBounds="6.5, 3.125, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_TBL_M_ABOUT_PERSON" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb308269-66c2-47ee-91d4-38458898fa45" absoluteBounds="6.515, 3.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d42ed203-0859-47f4-8b13-224600bb4f73" isExpanded="false" absoluteBounds="6.5, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_M_ABOUT_PERSON" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4336429f-6cb6-479a-8133-11df775e511a" absoluteBounds="6.515, 3.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="67e07b58-456e-4331-8629-9e8a04f7aeb0" isExpanded="false" absoluteBounds="3.75, 6.25, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_CHALLENGE_ME" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a02d90f7-455f-4098-9218-d24c58d57ce8" absoluteBounds="3.765, 6.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df8bca96-29b7-434e-ad97-166a05345d7f" isExpanded="false" absoluteBounds="3.75, 5.75, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_CHOOSE_ME" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b21a93c9-ea6f-4f93-b7f6-6b82972e2679" absoluteBounds="3.765, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c3a864d-6b4e-4f18-8e65-c7c23aa417f7" isExpanded="false" absoluteBounds="5.75, 5.75, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_T_CHALLENGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbf3b394-8136-4d68-b001-7a2ef42fa23b" absoluteBounds="5.765, 6.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c959c918-a270-4734-9063-d9b6b2eb98c0" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_M_EMPLOYEE_NANO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eabd0304-ab7e-4e1b-a531-a76a9dd035ed" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d9c5df0-3abf-499f-901c-0ce0b2cd94e9" isExpanded="false" absoluteBounds="0.5, 4.875, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_R_PELAPOR_VIP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1acd1f7f-b028-4e20-8822-81385556b7ff" absoluteBounds="0.51499999999999968, 5.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d458e2a6-e489-43e0-bec8-9e4d2b6394ee" isExpanded="false" absoluteBounds="0.5, 5.625, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_ANGGOTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea3b4b78-4e1f-4ca7-b654-676a5164c311" absoluteBounds="0.51499999999999968, 6.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a88faf7-8e29-481c-ab4d-519357e1a361" isExpanded="false" absoluteBounds="3.125, 1.625, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_DETAIL_VIP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f789ea2-bc65-43a3-9878-dce17e2c5582" absoluteBounds="3.1399999999999997, 2.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7971e288-225c-437a-b552-d6dcce0b4c99" isExpanded="false" absoluteBounds="6.5, 3.875, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_DETAIL_PIC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1025d2d-e6d9-49bd-8c30-195f8b1e100b" absoluteBounds="6.515, 4.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bfbde025-46c6-4d5e-9b0b-2b82ca0ac55d" isExpanded="false" absoluteBounds="3.75, 6.75, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_R_SCORE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a14dbe91-221b-4d6f-92ae-31cef5610544" absoluteBounds="3.7649999999999997, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b5dfc1e-283d-4a6c-985f-90d8999455a9" isExpanded="false" absoluteBounds="3.75, 7.25, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_T_SCORE_CHALLANGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bde335d4-e35b-49c8-97a9-16b7dd8130b2" absoluteBounds="3.7649999999999997, 7.7100000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a0142a6c-b9df-4996-8be6-18e4808831b1" isExpanded="false" absoluteBounds="5.75, 6.75, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_SCORE_CHALLENGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20241734-0d5c-401a-95f7-965986262cd8" absoluteBounds="5.765, 7.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="feb96fdf-cf31-4fcc-b8a6-2e5555872fbf" isExpanded="false" absoluteBounds="5.75, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_TBL_T_CHALLENGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fcd19b4-2141-4be5-b6fd-e9eeeaf5aec0" absoluteBounds="5.765, 5.7100000000000009, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00470d55-e05a-469e-994f-e684d410d8e7" isExpanded="false" absoluteBounds="0.5, 6.625, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/TBL_T_GALERY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00849675-2268-44ea-8cb4-1dd88e77a825" absoluteBounds="0.51499999999999968, 7.0850000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="25a21615-1392-438a-8faa-036db1e36e3b" isExpanded="false" absoluteBounds="0.5, 7.25, 2, 0.45">
+      <DataClassMoniker Name="/DataClass_NanoDataContext/VW_TBL_T_GALERY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b47bbf50-53bd-4f37-961e-0bfed841b404" absoluteBounds="0.51499999999999968, 7.7100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

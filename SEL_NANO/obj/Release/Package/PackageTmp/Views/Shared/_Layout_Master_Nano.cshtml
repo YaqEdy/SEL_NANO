@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+
+    <meta property="og:title" content="Landing Page | Landing Page Bootstrap Theme by Bootstrapious.com!">
+    <meta property="og:site_name" content="Landing Page | Landing Page Bootstrap Theme by Bootstrapious.com!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary">
+    @*<meta name="twitter:creator" content="@bootstrapious">*@
+
+    @*    <title>NANOTech | Sel Nilai Inti</title>*@
+
+    @Scripts.Render("~/bundles/ExportKendo")
+
+    <title>@ViewBag.Title</title>
+
+    @{
+        ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+    }
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap and Font Awesome css -->
+    <link href="@ViewBag.pathParent/ContectLayout/Nano/css/font-awesome.css" rel="stylesheet">
+    <link href="@ViewBag.pathParent/ContectLayout/Nano/css/bootstrap.min.css" rel="stylesheet">
+    <!-- owl carousel css -->
+    <link href="@ViewBag.pathParent/ContectLayout/Nano/css/owl.carousel.css" rel="stylesheet">
+    <link href="@ViewBag.pathParent/ContectLayout/Nano/css/owl.theme.css" rel="stylesheet">
+    <!-- Theme stylesheet -->
+    <link href="@ViewBag.pathParent/ContectLayout/Nano/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes -->
+    <link href="@ViewBag.pathParent/ContectLayout/Nano/css/custom.css" rel="stylesheet">
+    <!-- CSS Animations -->
+    <link href="@ViewBag.pathParent/ContectLayout/Nano/css/animate.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Mordernizr -->
+    <script src="@ViewBag.pathParent/ContectLayout/Nano/js/modernizr-2.6.2.min.js"></script>
+    @*<link href="bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">*@
+    <!-- Responsivity for older IE -->
+    <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    @*Kendo*@
+    <link href="@ViewBag.pathParent/Kendo/css/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="@ViewBag.pathParent/Kendo/css/kendo.metro.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@ViewBag.pathParent/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/Kendo/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/Kendo/js/kendo.aspnetmvc.min.js"></script>
+
+    <style>
+        td {
+            text-align: left;
+        }
+        .navbarwidth{
+            width:1250px !important
+        }
+    </style>
+
+
+</head>
+<body data-spy="scroll" data-target="#navigation" data-offset="120">
+
+    <!-- *** NAVBAR ***
+    _________________________________________________________ -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header" data-animate="bounceIn">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <div class="navbar-brand scrollTo">                    
+                     <a href="#" onclick="ClickUser()" style="font-size:xx-large;color:white;margin-left:-60px">000</a>
+                    <a href="#intro">
+                        @Html.Raw(ViewBag.profil)                        
+                       @*<p style="margin-top:-40px;margin-left:30px">@ViewBag.dashboard</p>*@
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="navbar-collapse collapse navbarwidth" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="#intro">Intro</a>
+                    </li>
+                    <li>
+                        <a href="#section1">Meeting</a>
+                    </li>
+                    <li>
+                        <a href="#section2">Tentang Kami</a>
+                    </li>
+                    <li>
+                        <a href="#sectionFoto">Galery</a>
+                    </li>
+                    <li>
+                        <a href="#section3">Anggota</a>
+                    </li>
+                    <li>
+                        <a href="#section4">Kontak</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            @{ if (@ViewBag.NAMA == null)
+                             {@ViewBag.NRP}
+                             else
+                             { @ViewBag.NRP @(" - ") @ViewBag.NAMA } }
+                        </a>
+                    </li>
+
+                    @*--- custom ---*@
+                    @*<li>
+                    <a href="#" onclick="ClickUser()">sd</a>
+                </li>*@
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        @*<div align="right" style="margin-top:-80px">
+            <a href="#" onclick="ClickUser()" style="font-size:xx-large;color:white">000</a>
+        </div>*@
+    </div>
+    <!-- /#navbar -->
+    <!-- *** NAVBAR END *** -->
+
+    <div id="all">
+
+        <!-- *** INTRO IMAGE ***
+        _________________________________________________________ -->
+        @*<div id="intro" class="clearfix">
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <h1 data-animate="fadeInDown">SALAM HANGAT DARI KAMI</h1>
+                        <p class="message" data-animate="fadeInUp">Hangatnya suasana menciptakan bahagia, tertawa adalah bagian dari keseriusan kami menciptakan lingkungan komunitas yang produktif inovatif.</p>*@
+
+                        @*<div class="col-md-6 col-md-offset-3" data-animate="fadeInUp">
+                            <form action="#" method="post" id="frm-landingPage1" class="form">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="alamat email Anda" name="email" id="frm-landingPage1-email" required value="">
+                                    <span class="input-group-btn">
+                                        <input class="btn btn-default" type="submit" value="Kirim" name="_submit" id="frm-landingPage1-submit">
+                                    </span>
+                                </div>*@
+                        <!-- /input-group -->
+                        @*</form>
+                                <p class="text-small">Kami tidak akan menggadaikan apalagi menjual alamat email Anda, janji!</p>
+                            </div>*@
+                    @*</div>
+                </div>
+            </div>
+        </div>*@
+        <!-- *** INTRO IMAGE END *** -->
+        <!-- *** SERVICES ***
+        _________________________________________________________ -->
+        @RenderBody()
+
+        <!-- /.section -->
+        <!-- *** SERVICES END *** -->
+        <!-- *** ABOUT US ***
+        _________________________________________________________ -->
+        <!-- *** FOOTER ***
+        _________________________________________________________ -->
+        <div class="section" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="social">
+                            <a href="#" class="external facebook" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="external instagram" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="external twitter" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-twitter"></i></a>
+                            <a href="mailto:#" class="email" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+                        </p>
+                    </div>
+                    <!-- /.6 -->
+                    <div class="col-sm-6">
+                        <p>&copy; 2017 NANOTech.
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section -->
+        <!-- *** FOOTER END *** -->
+    </div>
+    <!-- js base -->
+    @*<script src="@ViewBag.pathParent/ContectLayout/Nano/js/jquery-1.11.0.min.js"></script>*@
+    <script src="@ViewBag.pathParent/ContectLayout/Nano/js/bootstrap.min.js"></script>
+
+    <!-- waypoints for scroll spy -->
+    <script src="@ViewBag.pathParent/ContectLayout/Nano/js/waypoints.min.js"></script>
+    <!-- owl carousel -->
+    <script src="@ViewBag.pathParent/ContectLayout/Nano/js/owl.carousel.min.js"></script>
+    <!-- jQuery scroll to -->
+    <script src="@ViewBag.pathParent/ContectLayout/Nano/js/jquery.scrollTo.min.js"></script>
+    <!-- main js file -->
+    <script src="@ViewBag.pathParent/ContectLayout/Nano/js/front.js"></script>
+
+    @*QR Code*@
+    <script src="@ViewBag.pathParent/ContectLayout/Nano/js/QrCode/qrcode.js"></script>
+    <script src="@ViewBag.pathParent/ContectLayout/Nano/js/QrCode/qrcode.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_NANO" Class="DataClass_NanoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=jiepsqdv403;Initial Catalog=DB_NANO;Persist Security Info=True;User ID=pmdp_user" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_NANOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="NANO.VW_NOTULEN" Member="VW_NOTULENs">
+    <Type Name="VW_NOTULEN">
+      <Column Name="PID_NOTULEN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TGL_PLAN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TGL_ACT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="URAIAN" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_KEGIATAN_MEETING" Member="VW_KEGIATAN_MEETINGs">
+    <Type Name="VW_KEGIATAN_MEETING">
+      <Column Name="PID_K_MEETING" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TGL_PLAN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TGL_ACT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SHEARING_PLAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SHEARING_PLAN_NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SHEARING_ACT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SHEARING_ACT_NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SHEARING_TOPIC" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="NOTULEN_PLAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NOTULEN_PLAN_NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NOTULEN_ACT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NOTULEN_ACT_NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_PELAPOR_VIP" Member="VW_PELAPOR_VIPs">
+    <Type Name="VW_PELAPOR_VIP">
+      <Column Name="PID_PELAPOR_VIP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UTAMA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UTAMA_DESC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CADANGAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CADANGAN_DESC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ACTUAL" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ACTUAL_DESC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_R_KEHADIRAN" Member="TBL_R_KEHADIRANs">
+    <Type Name="TBL_R_KEHADIRAN">
+      <Column Name="ID_KEHADIRAN" Type="System.String" DbType="VarChar(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KEHADIRAN_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_T_KEHADIRAN_MEETING" Member="TBL_T_KEHADIRAN_MEETINGs">
+    <Type Name="TBL_T_KEHADIRAN_MEETING">
+      <Column Name="PID_KEHADIRAN" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TGL_PLAN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TGL_ACT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KEHADIRAN" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="KEHADIRAN_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_T_KEGIATAN_MEETING" Member="TBL_T_KEGIATAN_MEETINGs">
+    <Type Name="TBL_T_KEGIATAN_MEETING">
+      <Column Name="PID_K_MEETING" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TGL_PLAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TGL_ACT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SHEARING_PLAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SHEARING_ACT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SHEARING_TOPIC" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="NOTULEN_PLAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NOTULEN_ACT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_T_NOTULEN" Member="TBL_T_NOTULENs">
+    <Type Name="TBL_T_NOTULEN">
+      <Column Name="PID_NOTULEN" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TGL_PLAN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TGL_ACT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="URAIAN" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_T_PELAPOR_VIP" Member="TBL_T_PELAPOR_VIPs">
+    <Type Name="TBL_T_PELAPOR_VIP">
+      <Column Name="PID_PELAPOR_VIP" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UTAMA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CADANGAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ACTUAL" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_M_MICRO_SHEARING" Member="TBL_M_MICRO_SHEARINGs">
+    <Type Name="TBL_M_MICRO_SHEARING">
+      <Column Name="PID_MICRO_SHEARING" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PENULIS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TEMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ISI" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_MICRO_SHEARING" Member="VW_MICRO_SHEARINGs">
+    <Type Name="VW_MICRO_SHEARING">
+      <Column Name="PID_MICRO_SHEARING" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PENULIS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TEMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ISI" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_M_MICRO_SHEARING_TEMP" Member="TBL_M_MICRO_SHEARING_TEMPs">
+    <Type Name="TBL_M_MICRO_SHEARING_TEMP">
+      <Column Name="SESSION_UPLOAD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PID_MICRO_SHEARING" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TANGGAL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PENULIS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TEMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ISI" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REMARKS" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_KEHADIRAN_MEETING" Member="VW_KEHADIRAN_MEETINGs">
+    <Type Name="VW_KEHADIRAN_MEETING">
+      <Column Name="PID_KEHADIRAN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TGL_PLAN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TGL_ACT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KEHADIRAN" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="KEHADIRAN_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PERSENTASE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PERSEN_NOW" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_TBL_M_EMPLOYEE_NANO" Member="VW_TBL_M_EMPLOYEE_NANOs">
+    <Type Name="VW_TBL_M_EMPLOYEE_NANO">
+      <Column Name="PID_EMPLOYEE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="COMP_USER" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_TBL_M_ABOUT_PERSONS" Member="VW_TBL_M_ABOUT_PERSONs">
+    <Type Name="VW_TBL_M_ABOUT_PERSON">
+      <Column Name="PID_PERSON" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="JABATAN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[DESC]" Member="DESC" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IMAGES" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SORT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_M_ABOUT_PERSONS" Member="TBL_M_ABOUT_PERSONs">
+    <Type Name="TBL_M_ABOUT_PERSON">
+      <Column Name="PID_PERSON" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="JABATAN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[DESC]" Member="DESC" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IMAGES" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SORT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_CHALLENGE_ME" Member="VW_CHALLENGE_MEs">
+    <Type Name="VW_CHALLENGE_ME">
+      <Column Name="PID_CH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CHALLENGE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_CHOOSE_ME" Member="VW_CHOOSE_MEs">
+    <Type Name="VW_CHOOSE_ME">
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_T_CHALLENGE" Member="TBL_T_CHALLENGEs">
+    <Type Name="TBL_T_CHALLENGE">
+      <Column Name="PID_T_CH" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PID_CH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHALLENGE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_M_EMPLOYEE_NANO" Member="TBL_M_EMPLOYEE_NANOs">
+    <Type Name="TBL_M_EMPLOYEE_NANO">
+      <Column Name="PID_EMPLOYEE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="COMP_USER" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TGL_JOIN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_R_PELAPOR_VIP" Member="TBL_R_PELAPOR_VIPs">
+    <Type Name="TBL_R_PELAPOR_VIP">
+      <Column Name="PID_PELAPOR" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UTAMA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="URUTAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_ANGGOTA" Member="VW_ANGGOTAs">
+    <Type Name="VW_ANGGOTA">
+      <Column Name="PID_EMPLOYEE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="COMP_USER" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TGL_JOIN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="JABATAN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SORT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_DETAIL_VIP" Member="VW_DETAIL_VIPs">
+    <Type Name="VW_DETAIL_VIP">
+      <Column Name="PID_PELAPOR_VIP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UTAMA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UTAMA_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CADANGAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CADANGAN_DESC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ACTUAL" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ACTUAL_DESC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KEHADIRAN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SHEARING" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SHEARING_TOPIC" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="URAIAN" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CHALLANGE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_DETAIL_PIC" Member="VW_DETAIL_PICs">
+    <Type Name="VW_DETAIL_PIC">
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="JML_SH_ACT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JML_NOT_ACT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JML_VIP_ACT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JML_MCRO_SH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JML_CHALLENGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JML_PIC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_R_SCORE" Member="VW_R_SCOREs">
+    <Type Name="VW_R_SCORE">
+      <Column Name="ID_SCORE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SCORE_DESC" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_T_SCORE_CHALLANGE" Member="TBL_T_SCORE_CHALLANGEs">
+    <Type Name="TBL_T_SCORE_CHALLANGE">
+      <Column Name="PID_SCORE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PID_T_CH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SCORE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATE_SCORE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_SCORE_CHALLENGE" Member="VW_SCORE_CHALLENGEs">
+    <Type Name="VW_SCORE_CHALLENGE">
+      <Column Name="PID_SCORE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PID_T_CH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHALLENGE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SCORE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SCORE_DESC" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_SCORE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_TBL_T_CHALLENGE" Member="VW_TBL_T_CHALLENGEs">
+    <Type Name="VW_TBL_T_CHALLENGE">
+      <Column Name="PID_T_CH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PID_CH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHALLENGE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.TBL_T_GALERY" Member="TBL_T_GALERies">
+    <Type Name="TBL_T_GALERY">
+      <Column Name="PID_GALERY" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FILE_PATH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FILE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NANO.VW_TBL_T_GALERY" Member="VW_TBL_T_GALERies">
+    <Type Name="VW_TBL_T_GALERY">
+      <Column Name="FILE_PATH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FILE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="NANO.cusp_RemarksToMicroShearingTemp" Method="cusp_RemarksToMicroShearingTemp">
+    <Parameter Name="sSESSION_UPLOAD" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="NANO.cusp_saveUploadMicroShearing" Method="cusp_saveUploadMicroShearing">
+    <Parameter Name="sSESSION_UPLOAD" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sStrSnrp" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="NANO.cusp_Generate_Plan" Method="cusp_Generate_Plan">
+    <Parameter Name="pNRP" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
